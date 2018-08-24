@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled  from 'styled-components';
-import Highlight from 'react-highlight';
+// import Highlight from 'react-highlight';
 
 
 const PageHeader = styled.h1`
