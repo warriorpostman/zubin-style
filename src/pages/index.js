@@ -1,8 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled  from 'styled-components';
-// import Highlight from 'react-highlight';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/styles/hljs';
 
+import CodeBlock from '../components/CodeBlock';
+
+// import 'highlight.js/styles/ascetic.css'
 
 const PageHeader = styled.h1`
   color: green;
@@ -23,23 +27,27 @@ const IndexPage = () => (
     </p>
     <PageHeader>First: A Top-level Page Heading</PageHeader>
     <p>^^^ it's a green heading. More specifically it's an H1. It's declared like this:</p>
-    <pre>{`
-      const PageHeader = styled.h1\`
-        color: green; 
-      \`;
-        `}
-    </pre>
+    <CodeBlock codeString={`
+        const PageHeader = styled.h1\`
+          color: green;
+        \`
+      `}
 
+    />
+    }
 
     <SpecialPageHeader>Second: A more special case of that heading</SpecialPageHeader>
     <p>^^^ See the difference? It's simple, just do this:
     </p>
-    <pre>{`
-      const SpecialPageHeader = styled(PageHeader)\`
-        text-decoration: underline;
+    <CodeBlock 
+      codeString={`
+        const SpecialPageHeader = styled(PageHeader)\`
+          text-decoration: underline;
         \`;
-        `}
-    </pre>
+        `
+        }
+    />
+
     <p>NOTE: Currently the library allows you to declare it as PageHeader.extend` etc`, but that will 
       be deprecated in the future. The above syntax also works if the target component is a not a 
       styled-component.
