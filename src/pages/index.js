@@ -37,7 +37,8 @@ const IndexPage = () => (
     }
 
     <SpecialPageHeader>Second: A more special case of that heading</SpecialPageHeader>
-    <p>^^^ See the difference? It's simple, just do this:
+    <p>
+      ^^^ See the difference? It's simple, just do this:
     </p>
     <CodeBlock 
       codeString={`
